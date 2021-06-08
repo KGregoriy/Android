@@ -1,4 +1,24 @@
 <resources>
-    <string name="app_name">Calculator</string>
-    <string name="_9">9</string>
+    <string name="app_name">Мой калькулятор</string>
+    <string name="_rezult">0</string>
+    <string name="_Button1">1</string>
+    <string name="_Button6">6</string>
+    <string name="_ButtonEqualls">=</string>
+    <string name="_ButtonPlus">+</string>
+    <string name="_ButtoDdel">Del</string>
+    <string name="_ButtonMinus">-</string>
+    <string name="_Button8">8</string>
+    <string name="_ButtonDot">,</string>
+    <string name="_ButtonPlusMinus">+/-</string>
+    <string name="_Button3">3</string>
+    <string name="_Button0">0</string>
+    <string name="_Button7">7</string>
+    <string name="_ButtonX">x</string>
+    <string name="_ButtonAC">AC</string>
+    <string name="_ButtonPercent">%</string>
+    <string name="_Button2">2</string>
+    <string name="_Button5">5</string>
+    <string name="_Button4">4</string>
+    <string name="_ButtonDiv">/</string>
+    <string name="_Button9">9</string>
 </resources>
