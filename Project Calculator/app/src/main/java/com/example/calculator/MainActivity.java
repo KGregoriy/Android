@@ -8,9 +8,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
+    private TextView textViewValue;
+    private String value1;
+    private String value2;
+    private final String zero = "0";
+    private Calculation calculation = new Calculation();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        textView = findViewById(R.id.textView);
+        textView      = findViewById(R.id.textView);
+        textViewValue = findViewById(R.id.textView2);
 
-        initButton_Clear_ClickListener();
         initButton_0_ClickListener();
         initButton_1_ClickListener();
         initButton_2_ClickListener();
@@ -34,20 +41,107 @@ public class MainActivity extends AppCompatActivity {
         initButton_7_ClickListener();
         initButton_8_ClickListener();
         initButton_9_ClickListener();
+
+        initButton_Clear_ClickListener();
+        initButton_PlusMinus_ClickListener();
+        initButton_Percent_ClickListener();
+        initButton_Del_ClickListener();
+
+        initButton_Div_ClickListener();
+        initButton_Multiply_ClickListener();
+        initButton_Minus_ClickListener();
+        initButton_Plus_ClickListener();
+        initButton_Equals_ClickListener();
     }
 
-    private void setText(TextView textView, String text) {
+    private void initButton_PlusMinus_ClickListener() {
+        Button button = findViewById(R.id.button_plus_minus);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value1 = textView.getText().toString();
+                value2 = calculation.Operation_Conversion(value1);
 
-        String zero = "0";
-        String string = textView.getText().toString();
+                //setTextRezult(textView, value2);
+                Toast.makeText(getApplicationContext(),"Кнопка пока не работает", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
-        //Toast.makeText(getApplicationContext(), string + "_" + (string.equals(zero)), Toast.LENGTH_SHORT).show();
+    private void initButton_Percent_ClickListener() {
+        Button button = findViewById(R.id.button_percent);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Кнопка пока не работает", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
-        if (string.equals(zero)){
-            string = "";
-        }
+    private void initButton_Del_ClickListener() {
+        Button button = findViewById(R.id.button19);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value1 = textView.getText().toString();
+                value1 = value1.substring(0, value1.length()-1);
+                setTextRezult(textView, value1);
+            }
+        });
+    }
 
-        textView.setText(string + text);
+    private void initButton_Div_ClickListener() {
+        Button button = findViewById(R.id.button_div);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setTextValue(textViewValue, textView.getText().toString());
+                setText(textView, button.getText().toString());
+            }
+        });
+    }
+
+    private void initButton_Multiply_ClickListener() {
+        Button button = findViewById(R.id.button_mul);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setTextValue(textViewValue, textView.getText().toString());
+                setText(textView, button.getText().toString());
+            }
+        });
+    }
+
+    private void initButton_Minus_ClickListener() {
+        Button button = findViewById(R.id.button_minus);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setTextValue(textViewValue, textView.getText().toString());
+                setText(textView, button.getText().toString());
+            }
+        });
+    }
+
+    private void initButton_Plus_ClickListener() {
+        Button button = findViewById(R.id.button_plus);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setTextValue(textViewValue, textView.getText().toString());
+                setText(textView, button.getText().toString());
+            }
+        });
+    }
+
+    private void initButton_Equals_ClickListener() {
+        Button button = findViewById(R.id.button_equally);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Кнопка пока не работает", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initButton_Clear_ClickListener() {
@@ -55,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText("0");
+                textView.setText(zero);
             }
         });
     }
@@ -160,4 +254,22 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    private void setText(TextView textView, String text) {
+        String string = textView.getText().toString();
+
+        if (string.equals(zero)){
+            string = "";
+        }
+
+        textView.setText(string + text);
+    }
+
+    private void setTextValue(TextView textView, String text){
+        textView.setText(text);
+    }
+
+    private void setTextRezult(TextView textView, String text){
+        textView.setText(text);
+    }
 }
