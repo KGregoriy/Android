@@ -1,7 +1,9 @@
 package com.example.calculator;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +12,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Constants {
 
     private TextView textView;
     private TextView textViewValue;
@@ -52,19 +54,34 @@ public class MainActivity extends AppCompatActivity {
         initButton_Minus_ClickListener();
         initButton_Plus_ClickListener();
         initButton_Equals_ClickListener();
+
+        initButton_settings();
+    }
+
+    private void initButton_settings() {
+        Button button = findViewById(R.id.buttonSettings);
+        button.setOnClickListener(v -> {
+            Intent runSetting = new Intent(MainActivity.this,SettingsActivity.class);
+            startActivity(runSetting);
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+
     }
 
     private void initButton_PlusMinus_ClickListener() {
         Button button = findViewById(R.id.button_plus_minus);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                value1 = textView.getText().toString();
-                value2 = calculation.Operation_Conversion(value1);
+        button.setOnClickListener(v -> {
+            value1 = textView.getText().toString();
+            value2 = calculation.Operation_Conversion(value1);
 
-                //setTextRezult(textView, value2);
-                Toast.makeText(getApplicationContext(),"Кнопка пока не работает", Toast.LENGTH_SHORT).show();
-            }
+            //setTextRezult(textView, value2);
+            Toast.makeText(getApplicationContext(),"Кнопка пока не работает", Toast.LENGTH_SHORT).show();
         });
     }
 

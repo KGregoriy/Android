@@ -8,9 +8,10 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_9"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="37dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
@@ -24,9 +25,10 @@
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_dot"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
@@ -39,9 +41,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_0"
         app:layout_constraintTop_toBottomOf="@+id/button_2" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_0"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
@@ -55,9 +58,10 @@
         app:layout_constraintTop_toBottomOf="@+id/button_3"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_1"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="13dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="68dp"
@@ -85,8 +89,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_7"
+        app:backgroundTint="@color/ButtonTintGrey"
         style="@style/ButtonStyle_Numbers"
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
@@ -100,9 +105,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_8"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_8"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
@@ -115,9 +121,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_9"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_2"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
@@ -130,9 +137,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_3"
         app:layout_constraintTop_toBottomOf="@+id/button_5" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_5"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
@@ -145,9 +153,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_6"
         app:layout_constraintTop_toBottomOf="@+id/button_8" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_equally"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="#FF6F00"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="68dp"
@@ -160,9 +169,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_dot"
         app:layout_constraintTop_toBottomOf="@+id/button_1" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_4"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="68dp"
@@ -175,9 +185,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_5"
         app:layout_constraintTop_toBottomOf="@+id/button_7" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_3"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
@@ -190,9 +201,10 @@
         app:layout_constraintStart_toEndOf="@+id/button19"
         app:layout_constraintTop_toBottomOf="@+id/button_6" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_6"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTintGrey"
         android:layout_marginStart="37dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
@@ -205,9 +217,10 @@
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/button_9" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_plus_minus"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTint"
         android:layout_marginStart="46dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="10dp"
@@ -220,9 +233,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_plus"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="#FF6F00"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -235,9 +249,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_minus"
         app:layout_constraintTop_toBottomOf="@+id/button19" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_percent"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTint"
         android:layout_marginStart="10dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="10dp"
@@ -250,9 +265,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_plus_minus"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_div"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="#FF6F00"
         android:layout_marginStart="46dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -265,9 +281,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_plus_minus" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button19"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTint"
         android:layout_marginStart="10dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="10dp"
@@ -280,9 +297,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_clear"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_clear"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="@color/ButtonTint"
         android:layout_marginStart="10dp"
         android:layout_marginTop="53dp"
         android:layout_marginEnd="10dp"
@@ -296,9 +314,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_percent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_mul"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="#FF6F00"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
@@ -311,9 +330,10 @@
         app:layout_constraintStart_toEndOf="@+id/button_div"
         app:layout_constraintTop_toBottomOf="@+id/button_percent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_minus"
         style="@style/ButtonStyle_Numbers"
+        app:backgroundTint="#FF6F00"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"

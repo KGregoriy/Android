@@ -22,4 +22,6 @@
     <string name="_ButtonDiv">/</string>
     <string name="_Button9">9</string>
     <string name="textview2">0</string>
+    <string name="SettingsActivityButtonReturn">Назад</string>
+    <string name="SettingsActivitySwitch">Темная тема</string>
 </resources>
